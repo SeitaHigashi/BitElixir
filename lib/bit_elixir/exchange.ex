@@ -1,6 +1,8 @@
 defmodule BitElixir.Exchange do
     use GenServer
 
+    alias BitElixir.Exchange.Account
+
     def start_link(init_args) do
         # you may want to register your server with `name: __MODULE__`
         # as a third argument to `start_link`
@@ -8,6 +10,6 @@ defmodule BitElixir.Exchange do
     end
 
     def init(_args) do
-        {:ok, :initial_state}
+        {:ok, %Account{}}
     end
 end
