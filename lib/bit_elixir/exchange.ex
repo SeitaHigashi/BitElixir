@@ -8,7 +8,6 @@ defmodule BitElixir.Exchange do
     end
 
     def init(_args) do
-        IO.puts "init"
         {:ok, :initial_state}
     end
 end
