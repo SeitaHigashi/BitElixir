@@ -1,7 +1,9 @@
 defmodule BitElixir.Exchange do
     use GenServer
 
-    alias BitElixir.Exchange.Account
+    defmodule Account do
+        defstruct BTC: 0, JPY: BitElixir.Exchange.Value.get, Order: nil
+    end
 
     def start_link(init_args) do
         # you may want to register your server with `name: __MODULE__`
