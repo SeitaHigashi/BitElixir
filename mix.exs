@@ -30,7 +30,7 @@ defmodule BitElixir.MixProject do
     ]
   end
 
-  defp escript do
-    [main_module: BitElixir.CLI]
-  end
+  # defp escript do
+  #   [main_module: BitElixir.CLI]
+  # end
 end
