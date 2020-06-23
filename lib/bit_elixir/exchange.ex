@@ -5,7 +5,8 @@ defmodule BitElixir.Exchange do
         Task.start_link(__MODULE__, :run, [arg])
     end
 
-    def run(_arg) do
-        IO.puts "Exchange"
+    def run(arg) do
+        :timer.sleep(5000)
+        run(arg)
     end
 end
