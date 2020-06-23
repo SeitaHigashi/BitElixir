@@ -9,7 +9,8 @@ defmodule BitElixir.Application do
     children = [
       # Starts a worker by calling: BitElixir.Worker.start_link(arg)
       # {BitElixir.Worker, arg}
-      {BitElixir.Exchange, []}
+      #{BitElixir.Exchange, []}
+      {BitElixir.Account, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
