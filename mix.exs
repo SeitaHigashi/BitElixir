@@ -8,7 +8,7 @@ defmodule BitElixir.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      escript: escript()
+      #escript: escript()
     ]
   end
 
