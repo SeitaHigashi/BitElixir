@@ -1,12 +1,15 @@
 defmodule BitElixir.Exchange do
-    use Task
+    use GenServer
 
-    def start_link(arg) do
-        Task.start_link(__MODULE__, :run, [arg])
+    alias BitElixir.Account
+
+    def start_link(init_args) do
+        # you may want to register your server with `name: __MODULE__`
+        # as a third argument to `start_link`
+        GenServer.start_link(__MODULE__, [init_args])
     end
 
-    def run(arg) do
-        :timer.sleep(5000)
-        run(arg)
+    def init(_args) do
+        {:ok, %Account{}}
     end
 end

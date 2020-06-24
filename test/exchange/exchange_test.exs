@@ -1,13 +1,12 @@
 defmodule BitElixir.ExchangeTest do
   use ExUnit.Case
+
+  alias BitElixir.Account
+
   doctest BitElixir.Exchange
 
-  test "account test" do
-    assert BitElixir.Account.get == %BitElixir.Account{}
-
-    BitElixir.Account.order("order")
-
-    assert BitElixir.Account.get == %BitElixir.Account{Order: ["order"]}
+  test "init test" do
+    assert BitElixir.Exchange.init(nil) == {:ok, %Account{}}
   end
 
 end
