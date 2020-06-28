@@ -11,7 +11,12 @@ defmodule BitElixir.Exchange do
 
   def run(args \\ nil) do
     :timer.sleep(3000)
+    update()
     run(args)
+  end
+
+  def update do
+    Account.get
   end
 
 end

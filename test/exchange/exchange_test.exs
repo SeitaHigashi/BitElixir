@@ -7,8 +7,5 @@ defmodule BitElixir.ExchangeTest do
   doctest BitElixir.Exchange
 
   test "init test" do
-    assert Exchange.init(nil) == {:ok, %Account{}}
-
-    assert Exchange.get_account() == %Account{}
   end
 end
