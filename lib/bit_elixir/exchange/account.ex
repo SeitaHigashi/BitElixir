@@ -1,12 +1,12 @@
 defmodule BitElixir.Exchange.Account do
   use GenServer
 
-  defstruct BTC: 1, JPY: 0, Order: []
+  defstruct btc: 1, jpy: 0, order: []
 
   @type t :: %__MODULE__{
-          BTC: float,
-          JPY: float,
-          Order: list
+          btc: float,
+          jpy: float,
+          order: list
         }
 
   def start_link(init_args) do
