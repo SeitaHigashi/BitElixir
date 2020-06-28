@@ -10,6 +10,7 @@ defmodule BitElixir.Application do
       # Starts a worker by calling: BitElixir.Worker.start_link(arg)
       # {BitElixir.Worker, arg}
       {BitElixir.Exchange, []},
+      {BitElixir.Exchange.Account, []},
       {BitElixir.Counter, []}
     ]
 
